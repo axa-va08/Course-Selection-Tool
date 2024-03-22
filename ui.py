@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import time
 
 # Page title
 st.set_page_config(page_title='Interactive Course Builder', page_icon='📊')
@@ -25,7 +26,7 @@ st.markdown("""
         }
         .reveal-image {
             animation: reveal 3s ease-in-out;
-            width: 300px; /* Adjust the width as needed */
+            width: 500px; /* Adjust the width as needed */
         }
         .reverse-reveal-image {
             animation: reverse-reveal 2s ease-in-out;
