@@ -6,29 +6,50 @@ st.set_page_config(page_title='Interactive Course Builder', page_icon='📊')
 st.title('📊 Interactive Course Builder')
 
 
-# Add motion to the logo
+# Add motion to the logos
 st.markdown("""
     <style>
-        @keyframes spin {
+        @keyframes reveal {
+            0% { clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%); opacity: 0; }
+            50% { clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%); opacity: 0.5; }
+            100% { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 1; }
+        }
+        @keyframes reverse-reveal {
+            0% { clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 100% 0%); opacity: 0; }
+            50% { clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%); opacity: 0.5; }
+            100% { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 1; }
+        }
+        @keyframes rotation {
+            from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
-        img {
-            animation: spin 2s linear infinite;
+        .reveal-image {
+            animation: reveal 2s ease-in-out;
+            width: 100px; /* Adjust the width as needed */
+        }
+        .reverse-reveal-image {
+            animation: reverse-reveal 2s ease-in-out;
+            width: 100px; /* Adjust the width as needed */
+        }
+        .rotating-image {
+            animation: rotation 2s linear infinite;
+            width: 100px; /* Adjust the width as needed */
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-container img {
+            margin-right: 20px;
         }
     </style>
 """, unsafe_allow_html=True)
 
 # Logo with motion
-st.image("https://icons.veryicon.com/png/o/miscellaneous/life-linear-icon/gear-29.png", width=100)
-
-
-with st.expander('About this app'):
-    st.markdown('**What can this app do?**')
-    st.info(
-        'This application helps ease the process of planning university courses by selecting the most suitable courses based on your academic/career goals in IT.')
-    st.markdown('**How to use the app?**')
-    st.warning(
-        'To engage with the app, simply select your IT area(s) of interest from the available options.')
+st.markdown('<div class="logo-container">', unsafe_allow_html=True)
+st.markdown('<img src="https://www.askanundergrad.com/wp-content/uploads/2021/03/uoft-logo-1024x683.png" class="reveal-image">', unsafe_allow_html=True)
+st.markdown('<img src="https://icons.veryicon.com/png/o/miscellaneous/life-linear-icon/gear-29.png" class="rotating-image">', unsafe_allow_html=True)
+st.markdown('</div>', unsafe_allow_html=True)
 
 st.subheader('What will your university courses look like?')
 
