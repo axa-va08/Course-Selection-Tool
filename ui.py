@@ -105,3 +105,6 @@ if filtered_courses:
     st.dataframe(filtered_courses_df)
 else:
     st.write('No courses found for the selected disciplines.')
+
+
+# https://super-duper-space-eureka-pjjxqpxjpp7wf976g-8501.app.github.dev/
