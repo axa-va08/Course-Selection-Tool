@@ -24,8 +24,8 @@ st.markdown("""
             to { transform: rotate(360deg); }
         }
         .reveal-image {
-            animation: reveal 2s ease-in-out;
-            width: 100px; /* Adjust the width as needed */
+            animation: reveal 3s ease-in-out;
+            width: 300px; /* Adjust the width as needed */
         }
         .reverse-reveal-image {
             animation: reverse-reveal 2s ease-in-out;
