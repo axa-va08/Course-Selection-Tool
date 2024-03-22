@@ -26,7 +26,7 @@ st.markdown("""
         }
         .reveal-image {
             animation: reveal 3s ease-in-out;
-            width: 500px; /* Adjust the width as needed */
+            width: 445px; /* Adjust the width as needed */
         }
         .reverse-reveal-image {
             animation: reverse-reveal 2s ease-in-out;
